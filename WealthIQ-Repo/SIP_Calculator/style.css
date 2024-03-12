@@ -93,3 +93,16 @@
    }
 
 }
+
+.SIP_info{
+   padding: 2%;
+   font-family: "Roboto", sans-serif;
+   width: 52%;
+   margin: 24px auto;
+   background: #fff;
+  box-shadow: 0 12px 50px -11px rgb(0,0,0.2); 
+  border-radius: 8px;    
+  color: #142131;
+  overflow: hidden;
+  line-height: 25px;
+}
