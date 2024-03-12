@@ -1,0 +1,95 @@
+
+.loan-calculator{
+    font-family: "Roboto", sans-serif;
+    width: 750px;
+    margin: 24px auto;
+    background: #fff;
+   box-shadow: 0 12px 50px -11px rgb(0,0,0.2); 
+   border-radius: 8px;    
+   color: #142131;
+   overflow: hidden;
+}
+.loan-calculator .top{
+   background: #142131;
+   color: #fff;
+   padding: 32px;
+}
+.loan-calculator .top h2{
+   margin-top: 0;
+}
+.loan-calculator .top form{
+   display: flex;
+   gap: 8px;
+   justify-content: space-between;
+}
+.loan-calculator .input-title{
+
+       margin-bottom: 16px;
+}
+
+.loan-calculator .top form input{
+   font-size: 20px;
+   padding: 8px 24px;
+   width: 100%;
+}
+.loan-calculator , .loan-calculator *{
+  box-sizing: border-box; 
+}
+.loan-calculator .result{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.loan-calculator .result .left{
+   width: 100%;
+   padding: 8px 32px;
+}
+
+.loan-calculator .result .left h3{
+   font-size:16px ;
+   font-weight:400px;
+   margin-bottom: 8px;
+}
+.loan-calculator .result .result-value{
+   border-bottom: 1px solid rgb(0,0,0.2);
+   font-size: 30px;
+   font-weight: 900;
+   padding-bottom: 7px;
+}
+.loan-calculator .result .result-value::before {
+   content: "₹";
+   font-size: 30px;
+   margin-right: 10px;
+   font-weight: 400;
+   opacity: 0.4;
+}
+.loan-calculator .calculate-btn{
+   background: #e63946;
+   border: none;
+   padding: 7px 20px;
+   font-size: 18px;
+   color: #fff;
+   border-radius: 7px;
+   font-weight: 900;
+   cursor: pointer;
+   margin: 24px 0;
+
+
+}
+
+@media (max-width:650px){
+
+   .loan-calculator{
+       width: 90%;
+       max-width: 500px;
+   }
+   .loan-calculator form{
+       flex-direction: column;
+       gap: 30px;
+   }
+   .loan-calculator .result{
+       flex-direction: column;
+       text-align: center;
+   }
+
+}

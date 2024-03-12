@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="loan-calculator">
+        <div class="top">
+            <h2>SIP calculator</h2>
+            <form action="#">
+                <div class="input-group">
+                    <div class="input-title">Monthly investment</div>
+                    <input type="text" value="2000" class="loan-amount">
+                </div>
+                <div class="input-group">
+                    <div class="input-title">Expected return Rate</div>
+                    <input type="text" value="8" class="intrest-rate">
+                </div>
+                <div class="input-group">
+                    <div class="input-title">Time period (in years )</div>
+                    <input type="text" value="13" class="tenure">
+                </div>
+            </form>
+        </div>
+        <div class="result">
+            <div class="left">
+                <div class="loan-emi">
+                    <h3>Invested Amount</h3>
+                    <div class="result-value">13245</div>
+                </div>
+                <div class="total-intrest">
+                    <h3>Estimated Returns</h3>
+                    <div class="result-value">1132</div>
+                </div>
+                <div class="total-amount">
+                    <h3>Total value</h3>
+                    <div class="result-value">13245</div>
+                </div>
+                <button class="calculate-btn">Calculate</button>
+            </div>
+            <div class="right">
+                <div class="chart">
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="SIP_info">
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+<!-- <script>
+    const myChart = new Chart(ctx, {...});
+</script> -->
+
+</body>
+</html>
