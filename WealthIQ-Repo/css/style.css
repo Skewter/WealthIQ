@@ -394,7 +394,7 @@ a.navbar-brand {
 .banner_img {
     width: 58%;
     margin: 0 auto;
-    text-align: center;
+    text-align: cover;
 }
 
 #banner_slider a.carousel-control-prev {
@@ -601,6 +601,7 @@ p.chunks_text {
 
 .service_box.active .corporate_text {
     color: #e73232;
+    
 }
 
 .service_box.active .readmore_button a {
