@@ -809,14 +809,15 @@ figure:hover+span {
     width: 170px;
     float: left;
     margin-top: 50px;
+
 }
 
 .readmore_bt a {
     width: 100%;
     float: left;
     font-size: 16px;
-    color: #ffffff;
-    background-color: #e73232;
+    color: black;
+    background-color: lightgreen;
     text-align: center;
     padding: 10px;
     border-radius: 5px;
@@ -824,8 +825,8 @@ figure:hover+span {
 }
 
 .readmore_bt a:hover {
-    color: #ffffff;
-    background-color: #001431;
+    color: black;
+    background-color: cyan;
 }
 
 
