@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+          <!-- basic -->
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <!-- mobile metas -->
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+          <!-- site metas -->
+          <title>WealthIQ</title>
+          <meta name="keywords" content="">
+          <meta name="description" content="">
+          <meta name="author" content="">
+          <!-- bootstrap css -->
+          <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+          <!-- style css -->
+          <link rel="stylesheet" type="text/css" href="../css/style.css">
+          <!-- Responsive-->
+          <link rel="stylesheet" href="../css/responsive.css">
+          <!-- fevicon -->
+          <link rel="icon" href="../images/fevicon.png" type="image/gif" />
+          <!-- font css -->
+          <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+          <!-- Scrollbar Custom CSS -->
+          <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
+          <!-- Tweaks for older IEs-->
+          <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Government Scheme Information</title>
@@ -13,7 +39,7 @@
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1500px;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
@@ -21,12 +47,14 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .banner {
-            background-color: #007bff;
-            color: #fff;
-            padding: 15px;
+            background-color: teal;
+            color: greenyellow;
+            padding: 35px;
             text-align: center;
-            border-radius: 5px;
-            margin-bottom: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px; 
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
         }
         .scheme-info {
             margin-bottom: 30px;
@@ -45,13 +73,13 @@
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         }
         .scheme-info h2 {
-            color: #333;
+            color: black;
             margin-top: 0;
             margin-bottom: 10px;
         }
         .scheme-info p {
             text-align: justify;
-            color: #666;
+            color: black;
             line-height: 1.6;
             margin-bottom: 0;
         }
@@ -62,12 +90,47 @@
     </style>
 </head>
 <body>
-    <header>
-        <!-- Your header content goes here -->
-    </header>
+    <div class="header_section">
+        <div class="container-fluid">
+           <nav class="navbar navbar-expand-lg navbar-light bg-light">
+              <a class="navbar-brand"href="../index.html"><img src="../images/logo.png"></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                       <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="../about.html">About Us</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                       <a class="nav-link" href="../blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="../contact.html">Contact Us</a>
+                    </li>
+                 </ul>
+                 <form class="form-inline my-2 my-lg-0">
+                    <div class="login_bt">
+                       <ul>
+                          <li><a href="#"><span class="user_icon"><i class="fa fa-user" aria-hidden="true"></i></span>Login</a></li>
+                          <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                       </ul>
+                    </div>
+                 </form>
+              </div>
+           </nav>
+        </div>
+
+     </div>
+     <!-- header section end -->
+     <br> <br> <br> <br> 
     <div class="container">
         <div class="banner">
-            <h1>Government Scheme Information</h1>
+            <h1 style="font-size: 36px; color: white;">Government Scheme Information</h1>
         </div>
 
         <div class="scheme-info">
