@@ -27,6 +27,53 @@
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+
+      <style>
+  body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f3f3f3;
+    }
+    
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        width: calc(33.33% - 20px);
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card img {
+        width: 100%;
+        border-radius: 6px;
+    }
+    
+    .card h2 {
+        font-size: 1.5rem;
+        margin-top: 10px;
+    }
+    
+    .card p {
+        color: #555;
+        margin-top: 10px;
+    }
+      </style>
    </head>
    <body>
       <div class="header_section">
@@ -67,48 +114,32 @@
          </div>
       </div>
       <!-- header section end -->
-      <!-- studies section start -->
-      <div class="studies_section layout_padding">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <h1 class="studies_taital">Recent Case Studies</h1>
-               </div>
-            </div>
-            <div class="studies_section_2">
-               <div class="row">
-                  <div class="col-md-4">
-                     <div class="hover01 column">
-                        <figure><img src="images/service-img1.png"></figure>
-                     </div>
-                     <div class="studies_box">
-                        <h3 class="introduction_text">Master of Law, 2010</h3>
-                     </div>
-                     <div class="read_bt"><a href="#">Read More</a></div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="hover01 column">
-                        <figure><img src="images/service-img2.png"></figure>
-                     </div>
-                     <div class="studies_box">
-                        <h3 class="introduction_text">Master of Law, 2012</h3>
-                     </div>
-                     <div class="read_bt active"><a href="#">Read More</a></div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="hover01 column">
-                        <figure><img src="images/service-img3.png"></figure>
-                     </div>
-                     <div class="studies_box">
-                        <h3 class="introduction_text">Master of Law, 2014</h3>
-                     </div>
-                     <div class="read_bt"><a href="#">Read More</a></div>
-                  </div>
-               </div>
-            </div>
+      <br><br><br><br><br>
+      <div class="container">
+         <!-- Blog Post 1 -->
+         <div class="card">
+             <img src="images/cardipo1.png" alt="Blog Post Image">
+             <h2><center>Tata Technologies IPO</center></h2>
+             <p>The most-awaited initial public offering (IPO) of the year, Tata Technologies Ltd, opened for subscription on Wednesday, November 22, and closed on Friday, November 24. </p>
          </div>
-      </div>
-      <!-- studies section end -->
+     
+         <!-- Blog Post 2 -->
+         <div class="card">
+             <img src="images/tcsbuyb.png" alt="Blog Post Image">
+             <h2><center>TCS 17,000 Cr Buyback</center></h2>
+             <p>TCS will purchase back nearly 4,09,63,855 equity shares with a face value of Re 1 each, priced at ₹ 4,150 per piece</p>
+         </div>
+     
+         <!-- Blog Post 3 -->
+         <div class="card">
+             <img src="images/athnifty.png" alt="Blog Post Image">
+             <h2>Market at New High</h2>
+             <p>Sensex crosses 75K, Nifty hits 22,700</p>
+         </div>
+     
+         <!-- Add more blog posts as needed -->
+     </div>
+     
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
