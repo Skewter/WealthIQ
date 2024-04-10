@@ -1,0 +1,91 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+h2{
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid brown;
+    border-radius: 1%;
+}
+.calculator {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.calculator form {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.calculator .cff-form {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.calculator input[type="hidden"] {
+    display: none;
+}
+
+.calculator pre {
+    display: none !important;
+}
+
+.calculator .form_identifier,
+.calculator .userhelp,
+.calculator .audiotutorial,
+.calculator .tooltipIcon {
+    display: none;
+}
+
+.calculator .fieldset {
+    margin-bottom: 20px;
+}
+
+.calculator .fieldset legend {
+    font-weight: bold;
+}
+
+.calculator .col-sm-5 {
+    width: 50%;
+    float: left;
+    padding-right: 15px;
+}
+
+.calculator .clearer {
+    clear: both;
+}
+
+.calculator .fnumber input[type="number"],
+.calculator .fradio input[type="radio"] {
+    margin-right: 10px;
+}
+
+.calculator .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.calculator .description {
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.calculator .button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.calculator .button:hover {
+    background-color: #45a049;
+}
