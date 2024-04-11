@@ -27,6 +27,7 @@
               <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
               <!-- Tweaks for older IEs-->
               <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptocurrency Information</title>
     <style>
@@ -86,6 +87,12 @@
             float: left;
             margin-right: 20px;
         }
+        #chart-container {
+      width: 400px;
+      margin: 0 auto; /* Center the chart horizontally */
+    }
+   
+
     </style>
 </head>
 <body>
@@ -131,7 +138,7 @@
         <div class="banner">
             <h1>Cryptocurrency Information</h1>
         </div>
-
+<center><img src="../images/cryptic.png" alt="crypto"></center><br><br><br>
         <div class="crypto-info">
             <img src="../images/bitcoin.jpg" alt="Bitcoin">
             <h2>1. Bitcoin</h2>
@@ -170,9 +177,48 @@
             <p>
                 Dogecoin, introduced in 2013 by software engineers Billy Markus and Jackson Palmer, started as a lighthearted joke inspired by a popular internet meme featuring a Shiba Inu dog. Despite its humorous origin, Dogecoin has gained a dedicated following and community. It operates on a blockchain similar to Litecoin, with fast transaction times and low fees. Dogecoin's simplicity and approachability have contributed to its widespread adoption, making it a notable player in the cryptocurrency space alongside more serious contenders.
             </p>
-        </div>
-        
-        <!-- Add more cryptocurrency information as needed -->
+            <br><br><br><br>
+            <div id="chart-container">
+                <canvas id="myChart" width="200" height="200"></canvas>
+              </div>
+              <script>
+                const years = ["2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022"];
+                const data = [5507, -58, 35, 125, 1331, -73, 95, 301, 90, -81.02];
+            
+                const ctx = document.getElementById('myChart').getContext('2d');
+                const myChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                    labels: years,
+                    datasets: [{
+                      label: 'Percentage Growth',
+                      data: data,
+                      backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                      borderColor: 'rgba(54, 162, 235, 1)',
+                      borderWidth: 1
+                    }]
+                  },
+                  options: {
+                    scales: {
+                      y: {
+                        beginAtZero: true
+                      }
+                    },
+                    plugins: {
+                      legend: {
+                        display: false // Hide legend
+                      },
+                      datalabels: {
+                        anchor: 'end',
+                        align: 'top',
+                        formatter: function(value, context) {
+                          return value + '%'; // Add % symbol to the value
+                        }
+                      }
+                    }
+                  }
+                });
+              </script>
     </div>
           <!-- footer section start -->
           <div class="footer_section layout_padding">

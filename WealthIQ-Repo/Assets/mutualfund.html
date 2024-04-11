@@ -30,24 +30,22 @@
               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
               <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Information</title>
+    <title>Mutual Funds</title>
     <style>
         body {
-            font-family: 'Sen', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+            background-color: #ffff;
+            color:#ffff;
         }
         .container {
-            max-width: 98%;
-            margin-top: 2%;
-            margin-bottom: 2%;
-            /* margin: 20px auto; */
+            max-width: 95%;
+            margin: 20px auto;
             padding: 20px;
             /*background-color: #fff;*/
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
         }
         .banner {
             background-color: #e73232;
@@ -57,56 +55,39 @@
             border-radius: 5px;
             margin-bottom: 20px;
         }
-        .banner h1 {
-            margin: 0;
-            font-size: 28px;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            text-align: center;
+        .crypto-info {
+            margin-bottom: 30px;
+            overflow: hidden; /* Clear float */
+            background-color: #ffff;
+            border-radius: 10px;
+            padding: 20px;
+            /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); */
+            transition: transform 0.3s ease;
         }
-        h1, h2 {
-            color: #4caf50;
-            margin-top: 20px;
-            text-align: left;
+        /* .crypto-info:hover {
+            transform: translateY(-5px);
+            background-color: #e0e0e0;
+        } */
+        .crypto-info h2 {
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
         }
-        p {
+        .crypto-info p {
             text-align: justify;
             color: #666;
             line-height: 1.6;
+            margin-bottom: 0;
         }
-        ul {
-            margin-top: 0;
-            padding-left: 20px;
+        .crypto-info img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            float: left;
+            margin-right: 20px;
         }
-        ul li {
-            margin-bottom: 10px;
-            color: #e73232;
-        }
-        .highlight {
-            background-color: #f5f5f5;
-            border-radius: 5px;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        .highlight h2 {
-            color: #e73232;
-            margin-top: 0;
-        }
-        .highlight ol {
-            margin-top: 0;
-            padding-left: 20px;
-            list-style-type: none;
-        }
-        .highlight ol li {
-            margin-bottom: 10px;
-            color: #666;
-        }
-        #chart-container {
-      width: 80%; /* Adjust the width as needed */
-      margin: 0 auto; /* Center the container */
-    }
-
     </style>
 </head>
 <body>
@@ -150,88 +131,61 @@
      <br> <br> <br> <br>
     <div class="container">
         <div class="banner">
-            <h1>Real Estate Information</h1>
+            <h1>Mutual Funds</h1>
         </div>
 
-        <div class="highlight">
-            <h2>1. What is Real Estate?</h2>
+        <div class="crypto-info">
+            <img src="../images/images (1).jpeg.jpg" alt="Bitcoin">
+            <h2>1. What Are Mutual Funds?</h2>
             <p>
-                Real estate refers to property consisting of land and the buildings, natural resources, and improvements attached to it. It includes residential, commercial, industrial, and agricultural properties. Real estate is a significant component of the economy and is bought, sold, and leased by individuals, businesses, and governments for various purposes.
-The real estate market encompasses activities related to the buying, selling, and renting of properties, as well as the development, construction, and management of real estate assets. Real estate can be a valuable investment, providing income through rental payments or appreciation in value over time.
-Real estate transactions typically involve legal and financial considerations, including contracts, mortgages, property taxes, and zoning regulations. The real estate industry encompasses a wide range of professionals, including real estate agents, brokers, appraisers, lawyers, and developers, who facilitate these transactions and provide related services.
+                Mutual funds are investment vehicles that pool money from multiple investors to invest in a diversified portfolio of stocks, bonds, or other securities. They are managed by professional fund managers who make investment decisions on behalf of the investors.
             </p>
         </div>
 
-        <div class="highlight">
-            <h2>2. Why Invest in Real Estate?</h2>
+        <div class="crypto-info">
+            <img src="../images/investing-in-MF_OG.jpg" alt="Ethereum">
+            <h2>2. Benefits of Mutual Funds</h2>
             <p>
-                Investing in real estate presents a range of compelling reasons for investors seeking to diversify their portfolios and build wealth. Firstly, real estate offers the potential for capital appreciation over time, providing investors with opportunities for long-term growth. Additionally, rental income from properties can offer a steady cash flow stream, potentially covering expenses and mortgage payments while building equity. Real estate investments also serve as a hedge against market volatility, offering stability and diversification benefits. Moreover, tax advantages such as deductions for depreciation, mortgage interest, and property taxes can enhance overall returns. Real estate's ability to hedge against inflation, its tangible nature, and the control and leverage it affords investors further bolster its appeal. However, thorough research, risk assessment, and alignment with investment goals are crucial considerations before delving into real estate investing.
+                Investing in mutual funds offers several benefits:
+
+Diversification: Mutual funds offer exposure to a diversified portfolio of securities, reducing the risk of individual stock or bond investments.
+Professional Management: Experienced fund managers actively manage mutual fund portfolios, making investment decisions based on market research and analysis.
+Liquidity: Mutual fund shares can be bought or sold easily, providing investors with liquidity when needed.
+Convenience: Mutual funds offer convenience through features such as automatic investment plans, dividend reinvestment, and online account management.
+Transparency: Mutual funds provide regular updates on their holdings, performance, and expenses, ensuring transparency for investors.
             </p>
         </div>
 
-        <div class="highlight">
-            <h2>3. Wealth through Real Estate</h2>
+        <div class="crypto-info">
+            <img src="../images/mutual_funds_coins_660_230321030344.avif" alt="Litecoin">
+            <h2>3. Types of Mutual Funds </h2>
             <p>
-                Building wealth through real estate is a common goal for many investors due to the various opportunities it offers for long-term financial growth. One primary avenue for wealth accumulation in real estate is through property appreciation. Over time, real estate values tend to increase, allowing investors to build equity in their properties. Additionally, rental income from properties can provide a steady stream of cash flow, which can be reinvested or used to cover expenses. Real estate investments also offer tax advantages, including deductions for depreciation, mortgage interest, and property taxes, which can help optimize returns and preserve wealth. Furthermore, leveraging real estate through mortgage financing allows investors to amplify their returns and build wealth more rapidly. Overall, strategic real estate investments, coupled with diligent management and market analysis, can be instrumental in achieving long-term wealth accumulation objectives.
+                Equity Funds: Invest primarily in stocks, offering potential for capital appreciation.
+                Debt Funds: Invest in fixed-income securities such as bonds, providing regular income with lower risk.
+                Hybrid Funds: Invest in a mix of stocks and bonds, balancing risk and return.
+                Index Funds: Track the performance of a specific stock market index, offering low-cost passive investing.
+                Money Market Funds: Invest in short-term, low-risk securities such as Treasury bills and commercial paper, offering stability and liquidity.
+                Specialty Funds: Focus on specific sectors, themes, or investment strategies, offering opportunities for targeted exposure.
             </p>
         </div>
-        <div id="chart-container">
-            <canvas id="lineCharts"></canvas>
-          </div>
-         
-         <script>
-             const year = ["", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"];
-             const growthData = [0, 6.3, 6, 8, 8.5, 7, 7.5, 8, 7.2, 6.5, 7, 7.5]
 
-     
-             const ct = document.getElementById('lineCharts').getContext('2d');
-             const lineChart = new Chart(ct, {
-                 type: 'line',
-                 data: {
-                     labels: year,
-                     datasets: [{
-                         label: 'Percentage Growth',
-                         data: growthData,
-                         fill: false,
-                         borderColor: 'rgb(75, 192, 192)',
-                         tension: 0.1
-                     }]
-                 },
-                 options: {
-                     scales: {
-                         y: {
-                             ticks: {
-                                 callback: function(value) {
-                                     return value + '%';
-                                 }
-                             }
-                         }
-                     }
-                 }
-             });
-         </script>
-         <br><br>
+        <div class="crypto-info">
+            <img src="../images/SEO_Mutual-Funds-1.png" alt="XRP">
+            <h2>4. Investment Strategies</h2>
+            <p>
+                Mutual funds employ different investment strategies to achieve their objectives:
 
-        <div class="highlight">
-            <h2>4. Ways to Invest in Real Estate</h2>
-            <ol>
-                <li>Direct Ownership of Rental Properties</li>
-                <li>Real Estate Investment Trusts (REITs)</li>
-                <li>Real Estate Crowdfunding</li>
-                <li>Real Estate ETFs and Mutual Funds</li>
-            </ol>
+                Growth Investing: Focus on investing in companies with high growth potential.
+                Value Investing: Seek undervalued stocks trading below their intrinsic value.
+                Income Investing: Generate regular income through dividend-paying stocks or bonds.
+                Quantitative Investing: Use mathematical models and algorithms to identify investment opportunities.
+                Indexing: Replicate the performance of a specific market index, such as the S&P 500 or Nifty 50.
+                Active Management: Actively manage the portfolio to outperform the market or achieve specific investment goals.
         </div>
 
-        <div class="highlight">
-            <h2>5. Types of Returns/Incomes through Real Estate</h2>
-            <ol>
-                <li>Rental income</li>
-                <li>Capital appreciation</li>
-                <li>Dividend income</li>
-                <li>Interest income</li>
-                <li>Tax benefits</li>
-            </ol>
-        </div>
+        
+        
+        <!-- Add more cryptocurrency information as needed -->
     </div>
           <!-- footer section start -->
           <div class="footer_section layout_padding">

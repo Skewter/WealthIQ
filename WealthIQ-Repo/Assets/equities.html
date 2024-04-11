@@ -27,6 +27,8 @@
               <link rel="stylesheet" href="../css/jquery.mCustomScrollbar.min.css">
               <!-- Tweaks for older IEs-->
               <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equities Information</title>
     <style>
@@ -87,6 +89,10 @@
             margin-bottom: 10px;
             color: #666; /* Changed color to blue */
         }
+        #chart-container {
+      width: 80%; /* Adjust the width as needed */
+      margin: 0 auto; /* Center the container */
+    }
     </style>
 </head>
 <body>
@@ -153,7 +159,73 @@
                 Equities, or stocks, are favored by investors for several reasons. Firstly, they offer the potential for significant capital appreciation as companies grow and generate profits over time. Additionally, many companies distribute dividends to shareholders, providing a steady income stream. Equities also serve as a valuable tool for diversification, allowing investors to spread risk across different sectors and industries. Their liquidity ensures that investors can buy and sell shares easily, providing flexibility in portfolio management. Equities historically act as a hedge against inflation, preserving purchasing power in times of rising prices. Furthermore, investing in equities grants shareholders ownership stakes in companies, with the associated rights to vote in corporate decisions and potentially influence governance. Lastly, equities are widely accessible to investors of all sizes, thanks to online brokerage platforms and investment apps. However, it's crucial for investors to recognize the inherent risks associated with equities, including price volatility and the potential for loss of capital, and to conduct thorough research and diversify their portfolios accordingly.
             </p>
         </div>
-
+        <div id="chart-container">
+            <canvas id="line-chart"></canvas>
+          </div>
+         
+          <script>
+            // Data
+            const years = ["2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"];
+            const silverRates = [8800, 7560, 8560, 11027, 10830, 11960, 13630, 17340, 17660, 21725, 22750];
+        
+            // Chart.js
+            const ctx = document.getElementById('line-chart').getContext('2d');
+            const chart = new Chart(ctx, {
+              type: 'line',
+              data: {
+                labels: years,
+                datasets: [{
+                  label: 'Price',
+                  data: silverRates,
+                  fill: false,
+                  borderColor: 'rgb(75, 192, 192)',
+                  tension: 0.1
+                }]
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: false
+                  }
+                }
+              }
+            });
+          </script>
+          <br><br>
+        <div id="chart-container">
+            <canvas id="lineCharts"></canvas>
+          </div>
+         
+         <script>
+             const year = ["", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024"];
+             const growthData = [,31.4, -4.1, 3, 28.6, 3.2, 12, 14.9, 24.1, 4.3, 20,4.7];
+             const ct = document.getElementById('lineCharts').getContext('2d');
+             const lineChart = new Chart(ct, {
+                 type: 'line',
+                 data: {
+                     labels: year,
+                     datasets: [{
+                         label: 'Percentage Growth',
+                         data: growthData,
+                         fill: false,
+                         borderColor: 'rgb(75, 192, 192)',
+                         tension: 0.1
+                     }]
+                 },
+                 options: {
+                     scales: {
+                         y: {
+                             ticks: {
+                                 callback: function(value) {
+                                     return value + '%';
+                                 }
+                             }
+                         }
+                     }
+                 }
+             });
+         </script>
+         <br><br>
         <div class="highlight">
             <h2>4. Normal Equities vs. Dividend Equities</h2>
             <p>
