@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asset Returns Bar Chart</title>
+  <style>
+    #chart-container {
+      width: 600px;
+      margin: 20px auto;
+    }
+    .bar {
+      fill: steelblue;
+    }
+    .bar-text {
+      fill: black;
+      font-size: 12px;
+      text-anchor: middle;
+    }
+    .index-box {
+      fill: #f0f0f0;
+      stroke: black;
+    }
+    .index-text {
+      font-size: 10px;
+      text-anchor: middle;
+      overflow: hidden;
+    }
+    #index-container {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="chart-container"></div>
+  <div id="index-container"></div>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    // Data
+    const data = [
+      
+      { asset: "LargeCap MF", percentage: 13.03 },
+      { asset: "Sensex", percentage: 12.3 },
+      { asset: "REITs", percentage: 9.5 },
+      { asset: "PPF", percentage: 7.8 },
+      { asset: "FD", percentage: 7.2 },
+      { asset: "Gold", percentage: 7.2 },
+      { asset: "NSC", percentage: 7.5 },
+      { asset: "SSY", percentage: 7.45 },
+      { asset: "Bonds (India)", percentage: 7.06 },
+      { asset: "Bonds (US)", percentage: 5.11 },
+      { asset: "Silver", percentage: 0 }
+    ];
+
+    // Sort data in descending order
+    data.sort((a, b) => b.percentage - a.percentage);
+
+    // Dimensions
+    const width = 600;
+    const height = 500; // Increased height
+    const margin = { top: 20, right: 20, bottom: 80, left: 60 }; // Adjusted margin
+    const indexMargin = 10; // Adjusted space between x-axis and index
+
+    // SVG
+    const svg = d3.select("#chart-container")
+                  .append("svg")
+                  .attr("width", width + margin.left + margin.right)
+                  .attr("height", height + margin.top + margin.bottom)
+                  .append("g")
+                  .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    // Scales
+    const xScale = d3.scaleBand()
+                     .domain(data.map(d => d.asset))
+                     .range([0, width])
+                     .padding(0.1);
+
+    const yScale = d3.scaleLinear()
+                     .domain([0, d3.max(data, d => d.percentage)])
+                     .range([height, 0]);
+
+    // Bars
+    svg.selectAll(".bar")
+       .data(data)
+       .enter()
+       .append("rect")
+       .attr("class", "bar")
+       .attr("x", d => xScale(d.asset))
+       .attr("y", d => yScale(d.percentage))
+       .attr("width", xScale.bandwidth())
+       .attr("height", d => height - yScale(d.percentage));
+
+    // Bar Text (Percentage on top of bars)
+    svg.selectAll(".bar-text")
+       .data(data)
+       .enter()
+       .append("text")
+       .attr("class", "bar-text")
+       .attr("x", d => xScale(d.asset) + xScale.bandwidth() / 2)
+       .attr("y", d => yScale(d.percentage) - 5) // Adjusted position
+       .text(d => `${d.percentage}%`)
+       .attr("fill", "black")
+       .attr("font-size", "12px")
+       .attr("text-anchor", "middle");
+
+    // X Axis
+    svg.append("g")
+       .attr("transform", `translate(0, ${height})`)
+       .call(d3.axisBottom(xScale))
+       .selectAll("text")
+       .attr("transform", "rotate(-45)")
+       .style("text-anchor", "end");
+
+    // Y Axis
+    svg.append("g")
+       .call(d3.axisLeft(yScale));
+
+    // Add index text to the index container
+    const indexContainer = d3.select("#index-container");
+    indexContainer.append("p")
+                   .text("Large Cap Mutual Fund - Mutual Fund with large-cap stocks, Sensex - Stock market index, REITs - Real Estate Investment Trust, PPF - Public Provident Fund, FD - Fixed Deposit, Gold - Precious Metal, NSC - National Savings Certificate, SSY - Sukanya Samriddhi Yojana, Bonds (India) - Government Securities (G-Sec), Bonds (US) - US Treasury Bonds, Silver - Precious Metal");
+
+    // Title
+    svg.append("text")
+       .attr("x", width / 2)
+       .attr("y", -10)
+       .attr("text-anchor", "middle")
+       .style("font-weight", "bold")
+       .text("Asset Returns (10 Years from 2014)");
+
+  </script>
+</body>
+</html>
